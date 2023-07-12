@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+body{
+    background-color: aliceblue;
+}
+main{
+    width: 100%;
+    height: 100vh;
+}
+#myBg{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(20, 19, 19, 0.712);
+    z-index: 1;
+}
+.container{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.entry{
+    /* display: none; */
+    padding: 10px;
+    text-align: center;
+}
+ .entry #inp{
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    font-weight: 400;
+    background-color: rgba(88, 172, 10, 0.527);
+    color: white;
+    border: none;
+ }
+ input::placeholder{
+    color: white;
+ }
+ .entry #inp:focus{
+    outline: none;
+ }
+ .btn{
+    margin-top: 10px;
+    padding: 8px 10px;
+    border: 2px solid rgb(7, 194, 207);
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.603);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+ }
+
+.btn:hover{
+    background-color: rgba(230, 12, 12, 0.911);
+    border: 2px solid rgb(7, 194, 207);
+}
+.hacking{
+    z-index: 10;
+    color: rgb(247, 239, 239);
+    font-size: 16px;
+    text-align: center;
+    display: none;
+}
+.warning{
+    width: 100%;
+    height: 100vh;
+    background: rgb(255, 6, 6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: bg 1s ease-in-out infinite;
+    color: white;
+    display: none;
+}
+.warning img{
+    width: 25%;
+    animation: size 1s ease-in-out infinite;
+}
+.warning h1{
+    font-size: 17px;
+    text-align: center;
+}
+.final{
+    display: none;
+}
+.exitBtn{
+    position: fixed;
+    padding: 8px 14px;
+    background-color: rgb(7, 90, 146);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+@keyframes bg {
+    25%{
+        background: #b33939;
+    }
+    
+}
+@keyframes size {
+    100%{
+        width: 27%;
+    }
+    
+}
