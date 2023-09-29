@@ -23,15 +23,15 @@ function warning(){
             var exitBtn = document.createElement("button")
             exitBtn.innerHTML = "Need help???"
             exitBtn.className = "exitBtn"
-            document.querySelector('.container').appendChild(exitBtn)
+            document.querySelector('.warning').appendChild(exitBtn)
             exitBtn.addEventListener('click',()=>{
                 let audio = document.getElementById("myAudio")
                 let final = document.querySelector(".final")
                 let warning = document.querySelector(".warning")
                 audio.pause()
                 warning.style.display = 'none'
-                final.style.display = 'block'
-                final.innerHTML = `<video autoplay>
+                final.style.display = 'flex'
+                final.innerHTML = `<video autoplay loop controls>
                 <source src="Assets/videoplayback.mp4" type="video/mp4" id="majak">
             </video>`
             exitBtn.style.display = 'none'
@@ -90,7 +90,7 @@ btn.addEventListener('click',(e)=>{
     e.preventDefault;
     let input = document.getElementById("inp").value
     if(input.length == 0){
-        alert("must enter user")
+        alert("must enter username")
         return;
     }else{
        entry().then(fetching).then(found).then(hacking).then(hacked).then(warning)

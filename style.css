@@ -11,6 +11,9 @@ body{
 main{
     width: 100%;
     height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.432),rgba(0, 0, 0, 0.37)),url('./Assets/bg.jpg');
+    background-size: cover;
+    background-position: center;
 }
 #myBg{
     position: absolute;
@@ -26,6 +29,9 @@ main{
     background-color: rgba(20, 19, 19, 0.712);
     z-index: 1;
 }
+video{
+    margin: 10px auto;
+}
 .container{
     position: fixed;
     top: 0;
@@ -33,14 +39,13 @@ main{
     height: 100vh;
     z-index: 10;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
 }
 .entry{
     /* display: none; */
     padding: 10px;
     text-align: center;
+    margin-top: 180px;
 }
  .entry #inp{
     padding: 10px;
@@ -73,6 +78,7 @@ main{
     border: 2px solid rgb(7, 194, 207);
 }
 .hacking{
+    margin-top: 180px;
     z-index: 10;
     color: rgb(247, 239, 239);
     font-size: 16px;
@@ -80,6 +86,7 @@ main{
     display: none;
 }
 .warning{
+    /* margin-top: 180px; */
     width: 100%;
     height: 100vh;
     background: rgb(255, 6, 6);
@@ -100,10 +107,13 @@ main{
     text-align: center;
 }
 .final{
+    height: 100vh;
     display: none;
+    justify-content: center;
+    align-items: center;
 }
 .exitBtn{
-    position: fixed;
+    margin:20px auto;
     padding: 8px 14px;
     background-color: rgb(7, 90, 146);
     color: rgb(255, 255, 255);
@@ -123,4 +133,8 @@ main{
         width: 27%;
     }
     
+}
+
+#majak{
+    width: 1000px;
 }
